@@ -1,0 +1,70 @@
+body {
+  margin: 24px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.character-card {
+  width: 180px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  color: inherit;
+  text-decoration: none;
+}
+
+.character-card:hover,
+.character-card:focus-visible {
+  border-color: #333;
+}
+
+.character-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.character-card h2 {
+  margin: 12px 0 0;
+  font-size: 18px;
+}
+
+.character-details {
+  max-width: 720px;
+}
+
+.character-image {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.character-details dt {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.character-details dd {
+  margin: 4px 0 0;
+}
+
+.character-description {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
