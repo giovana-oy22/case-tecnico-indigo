@@ -54,7 +54,7 @@ export function useCharacters(page = 1, limit = 2) {
 
     loadCharacters(page);
     return () => { ignore = true; };
-  }, [page]);
+  }, [page, limit]);
 
   return { characters, loading, error };
 }
