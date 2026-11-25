@@ -1,15 +1,39 @@
 import { useState } from 'react';
 import { useCharacters } from '../hooks/useCharacters';
+import onePieceLogo from '../assets/One_Piece_Logo.png';
+import onePieceLoading from '../assets/One_Piece_loading.gif';
+import '../styles/Home.css';
 
 export default function Home() {
   const [page, setPage] = useState(1);
-  const limit = 2;
+  const limit = 4;
   const totalPages = 2;
   const { characters, loading, error } = useCharacters(page, limit);
 
+  if (loading) {
+    return (
+      <main className="loading-screen">
+        <img className="loading" src={onePieceLoading} alt="Carregando..." />
+      </main>
+    );
+  }
+  if (error) {
+    return <p>{error}</p>;
+  }
+  if (!characters) {
+    return (
+      <>
+        <p>Personagens não encontrados.</p>
+      </>
+    );
+  }
+
   return (
     <main>
-      <h1>Personagens de One Piece</h1>
+      <header className="home-header">
+        <img className="logo" src={onePieceLogo} alt="One Piece" />
+        <h1>Personagens</h1>
+      </header>
       <div className="characters">
         {characters.map((character) => (
           <a
@@ -20,7 +44,6 @@ export default function Home() {
             <img
               src={character.image.large}
               alt={character.name.full}
-              crossOrigin="anonymous"
             />
             <h2>{character.name.full}</h2>
           </a>
