@@ -1,0 +1,124 @@
+.character-details {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.back-button,
+.site-link {
+  color: #f5f3f3;
+}
+
+.back-button:visited,
+.site-link:visited {
+  color: #97424286;
+}
+
+.back-button:hover,
+.site-link:hover {
+  color: #ffd166;
+}
+
+.back-button:focus-visible,
+.site-link:focus-visible {
+  outline: 2px solid #ffd166;
+  outline-offset: 3px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border: 1px solid rgb(255 209 102 / 55%);
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgb(255 209 102 / 18%), rgb(255 209 102 / 5%));
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+  text-decoration: none;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.back-button:hover {
+  border-color: #ffd166;
+  background-color: rgb(255 209 102 / 24%);
+  transform: translateX(-2px);
+}
+
+.back-button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.character-image {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.character-details dl {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 10px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.character-details h2 {
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.character-details dt {
+  font-weight: bold;
+}
+
+.character-details dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.character-description {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.description-intro {
+  text-align: left;
+}
+
+.description-paragraph {
+  text-align: justify;
+}
+
+.character-description a {
+  color: #ffd166;
+}
+
+.character-description details {
+  display: inline;
+}
+
+.character-description summary {
+  display: inline;
+  cursor: pointer;
+  color: #ffd166;
+}
+
+.description-spoiler-content {
+  display: none;
+}
+
+.description-spoiler[open] .description-spoiler-content {
+  display: inline;
+}
